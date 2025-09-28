@@ -32,7 +32,7 @@ steps:
 # ================= Build Image and push to repo =================
 # Build image
 - task: Docker@2
-  displayName: "Build frontend image"
+  displayName: "Build image"
   inputs:
     command: build
     containerRegistry: ACR-Connection
@@ -44,7 +44,7 @@ steps:
 
 # Push to ACR
 - task: Docker@2
-  displayName: "Push frontend image to ACR"
+  displayName: "Push image to ACR"
   inputs:
     command: push
     containerRegistry: ACR-Connection
@@ -59,7 +59,7 @@ steps:
 
 # Push to Docker Hub
 - task: Docker@2
-  displayName: "Push frontend image to Docker Hub"
+  displayName: "Push image to Docker Hub"
   inputs:
     command: push
     containerRegistry: DockerHub-Connection
