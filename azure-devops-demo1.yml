@@ -14,7 +14,7 @@ steps:
 - checkout: self
 
 # ================= MAVEN BUILD =================
-- task: Maven@3
+- task: Maven@4
   displayName: "Build JARs"
   inputs:
     mavenPomFile: 'pom.xml'
